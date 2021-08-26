@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Esse trecho de estilo se refere ao header do blog. */
 .header {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -57,6 +58,7 @@
   margin: 7px auto;
 }
 
+/* Esse trecho de estilo se refere ao main do index.html*/
 .main {
   display: flex;
   flex-wrap: wrap;
@@ -151,6 +153,71 @@
 }
 .main__a:hover {
   color: #a050be;
+}
+
+/* Esse trecho de estilo se refere ao article about do about.html */
+.about {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto 40px;
+  width: 80%;
+}
+.about__title {
+  background-color: #eaeaeb;
+  padding: 20px;
+  text-align: center;
+}
+.about__h1 {
+  color: #464646;
+  font-size: 22px;
+  letter-spacing: 1px;
+  margin: 5px 0 10px;
+}
+.about .breadcrumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .breadcrumb__link {
+  color: #464646;
+  font-size: 12px;
+  text-decoration: none;
+}
+.about .breadcrumb__link:hover {
+  color: #a050be;
+  text-decoration: underline;
+}
+.about .breadcrumb__img {
+  width: 14px;
+  margin: 10px;
+}
+.about__img {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.about__intro {
+  color: #464646;
+  font-size: 16px;
+  font-weight: 100;
+  margin: 30px auto;
+  text-align: center;
+  width: 70%;
+}
+.about__split {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.about__img2 {
+  width: 45%;
+}
+.about__txt {
+  width: calc(100% - 45%);
+}
+.about__p {
+  color: #464646;
+  font-size: 14px;
+  padding: 10px 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
