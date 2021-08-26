@@ -4,53 +4,54 @@ $dark-grey: #464646;
 
 .header {
     font-family: Arial, Helvetica, sans-serif;
-}
 
-.header__logo {
-    text-align: center;
-}
+    &__logo {
+        text-align: center;
+    }
 
-.header__logo .header__img {
-    max-width: 350px;
-}
+    &__img {
+        max-width: 350px;
+    }
 
-.header__menu .menu__list {
-    border-bottom: 1px solid $light-grey;
-    border-top: 1px solid $light-grey;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 20px 0;
-    width: 80%;
-}
+    .menu {
+        &__list {
+            border-bottom: 1px solid $light-grey;
+            border-top: 1px solid $light-grey;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 20px 0;
+            width: 80%;
+        }
 
-.header__menu .menu__list .menu__links {
-    position: relative;
-}
+        &__links {
+            position: relative;
 
-.header__menu .menu__list .menu__links:not(:last-child):after {
-    background-color: $light-grey;
-    bottom: 0;
-    content: "";
-    height: 15px;
-    margin: auto;
-    position: absolute;
-    right: -3px;
-    top: 0;
-    width: 1px;
-}
+            &:not(:last-child):after {
+                background-color: $light-grey;
+                bottom: 0;
+                content: "";
+                height: 15px;
+                margin: auto;
+                position: absolute;
+                right: -3px;
+                top: 0;
+                width: 1px;
+            }
+        }
 
-.header__menu .menu__list .menu__links .menu__link {
-    padding: 0 25px;
-    color: $dark-grey;
-}
+        &__link {
+            color: $dark-grey;
+            padding: 0 25px;
 
-.header__menu .menu__list .menu__links .menu__link:hover {
-    color: $purple;
+            &:hover {
+                color: $purple;
+            }
+        }
+    }
 }
 
 /* Esse trecho de estilo se refere ao rodapé do blog. */
-
 .footer {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
@@ -60,13 +61,13 @@ $dark-grey: #464646;
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
-}
 
-.footer .footer__logo {
-    max-width: 100px;
-}
+    &__logo {
+        max-width: 100px;
+    }
 
-.footer .footer__txt {
-    font-size: 14px;
-    margin: 7px auto;
+    &__txt {
+        font-size: 14px;
+        margin: 7px auto;
+    }
 }
