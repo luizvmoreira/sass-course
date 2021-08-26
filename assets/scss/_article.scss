@@ -1,0 +1,64 @@
+/* Esse trecho de código se refere ao artigo principal do blog. */
+
+.article {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto 40px;
+    width: 80%;
+    @include for-phone-only {
+        width: 90%;
+    }
+    &__title {
+        background-color: $light-grey;
+        padding: 20px;
+        text-align: center;
+    }
+    &__h1 {
+        color: $dark-grey;
+        @include fontSize(22px);
+        letter-spacing: 1px;
+        margin: 5px 0 5px
+    }
+    .breadcrumb {
+        @include flx(justify-content, center);
+        align-items: center;
+        &__link {
+            color: $dark-grey;
+            @include fontSize(12px);
+            @extend %no-decoration;
+            &:hover {
+                color: $purple;
+                @extend %decoration;
+            }
+        }
+        &__img {
+            width: 14px;
+            margin: 10px;
+        }
+    }
+    &__img {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    &__details {
+        @include flx(justify-content, center);
+        align-items: center;
+    }
+    &__date {
+        @include fontSize(12px);
+        font-style: italic;
+        margin: 0 10px;
+    }
+    &__tag {
+        border: 1px solid $purple;
+        color: $purple;
+        @include fontSize(14px);
+        margin: 0 10px;
+        padding: 5px 7px;
+    }
+    &__content {
+        color: $dark-grey;
+        @include fontSize(14px);
+        font-weight: 100;
+        padding: 10px 20px;
+    }
+}
