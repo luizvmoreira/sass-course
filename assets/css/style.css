@@ -18,10 +18,10 @@
   max-width: 350px;
 }
 .header .menu__list {
-  border-bottom: 1px solid #eaeaeb;
-  border-top: 1px solid #eaeaeb;
   display: flex;
   justify-content: center;
+  border-bottom: 1px solid #eaeaeb;
+  border-top: 1px solid #eaeaeb;
   margin: 0 auto;
   padding: 20px 0;
   width: 80%;
@@ -69,9 +69,9 @@
 /* Esse trecho de estilo se refere ao main do index.html*/
 .main {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   font-family: Arial, Helvetica, sans-serif;
-  justify-content: center;
 }
 .main__content {
   padding: 40px 8px;
@@ -92,9 +92,9 @@
   color: #a050be;
 }
 .main__subtitle {
-  align-items: center;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 10px 0 20px 0;
 }
 .main__date {
@@ -135,10 +135,10 @@
   color: #fabe50;
 }
 .main__info {
+  display: flex;
+  justify-content: center;
   align-items: center;
   border-top: 1px solid #eaeaeb;
-  display: flex;
-  justify-content: space-between;
   margin-top: 30px;
 }
 .main__author {
@@ -185,10 +185,10 @@
   list-style: none;
 }
 .main .sidebar__list {
-  align-items: center;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 10px;
 }
 .main .sidebar__list:not(:last-child) {
@@ -227,7 +227,7 @@
   color: #464646;
   font-size: 22px;
   letter-spacing: 1px;
-  margin: 5px 0 10px;
+  margin: 5px 0 5px;
 }
 .about .breadcrumb {
   display: flex;
@@ -258,10 +258,10 @@
   width: 70%;
 }
 .about__split {
-  align-items: center;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .about__img-description {
   width: 45%;
@@ -289,7 +289,7 @@
   color: #464646;
   font-size: 22px;
   letter-spacing: 1px;
-  margin: 5px 0 10px;
+  margin: 5px 0 5px;
 }
 .article .breadcrumb {
   display: flex;
@@ -312,9 +312,9 @@
   width: 100%;
 }
 .article__details {
-  align-items: center;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .article__date {
   font-size: 12px;

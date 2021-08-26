@@ -17,6 +17,11 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
     list-style: none;
 }
 
+@mixin flx($property, $jty-cnt) {
+    display: flex;
+    #{$property}: #{$jty-cnt};
+}
+
 
 /* Esse trecho de estilo se refere ao header do blog. */
 
@@ -30,10 +35,9 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
     }
     .menu {
         &__list {
+            @include flx(justify-content, center);
             border-bottom: 1px solid $light-grey;
             border-top: 1px solid $light-grey;
-            display: flex;
-            justify-content: center;
             margin: 0 auto;
             padding: 20px 0;
             width: 80%;
@@ -69,7 +73,6 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     padding: 20px 0;
-    // Posicionamento do footer
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -87,10 +90,9 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
 /* Esse trecho de estilo se refere ao main do index.html*/
 
 .main {
-    display: flex;
+    @include flx(justify-content, center);
     flex-wrap: wrap;
     font-family: Arial, Helvetica, sans-serif;
-    justify-content: center;
     &__content {
         padding: 40px 8px;
         width: 70%;
@@ -110,9 +112,8 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
         }
     }
     &__subtitle {
+        @include flx(justify-content, center);
         align-items: center;
-        display: flex;
-        justify-content: center;
         margin: 10px 0 20px 0;
     }
     &__date {
@@ -153,10 +154,9 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
         }
     }
     &__info {
+        @include flx(justify-content, center);
         align-items: center;
         border-top: 1px solid $light-grey;
-        display: flex;
-        justify-content: space-between;
         margin-top: 30px;
     }
     &__author {
@@ -202,10 +202,9 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
             @include reset-list;
         }
         &__list {
+            @include flx(justify-content, center);
             align-items: center;
-            display: flex;
             flex-wrap: wrap;
-            justify-content: center;
             padding: 10px;
             &:not(:last-child) {
                 border-bottom: 1px dashed $light-grey;
@@ -251,11 +250,10 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
         color: $dark-grey;
         font-size: 22px;
         letter-spacing: 1px;
-        margin: 5px 0 10px
+        margin: 5px 0 5px
     }
     .breadcrumb {
-        display: flex;
-        justify-content: center;
+        @include flx(justify-content, center);
         align-items: center;
         &__link {
             color: $dark-grey;
@@ -284,10 +282,9 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
         width: 70%;
     }
     &__split {
+        @include flx(justify-content, center);
         align-items: center;
-        display: flex;
         flex-wrap: wrap;
-        justify-content: center;
     }
     &__img-description {
         width: $img-width;
@@ -315,11 +312,10 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
         color: $dark-grey;
         font-size: 22px;
         letter-spacing: 1px;
-        margin: 5px 0 10px
+        margin: 5px 0 5px
     }
     .breadcrumb {
-        display: flex;
-        justify-content: center;
+        @include flx(justify-content, center);
         align-items: center;
         &__link {
             color: $dark-grey;
@@ -340,9 +336,8 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
         width: 100%;
     }
     &__details {
+        @include flx(justify-content, center);
         align-items: center;
-        display: flex;
-        justify-content: center;
     }
     &__date {
         font-size: 12px;
