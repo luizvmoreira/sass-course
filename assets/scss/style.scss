@@ -57,11 +57,25 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
             border-bottom: 1px solid $light-grey;
             border-top: 1px solid $light-grey;
             margin: 0 auto;
-            padding: 20px 0;
-            width: 80%;
+            @include for-phone-only {
+                width: 90%;
+                padding: 15px 0;
+                flex-wrap: wrap;
+            }
+            @include for-tablet-only {
+                width: 80%;
+                padding: 20px 0;
+            }
+            @include for-desktop-only {
+                width: 80%;
+                padding: 20px 0;
+            }
         }
         &__links {
             position: relative;
+            @include for-phone-only {
+                padding: 5px 0;
+            }
             &:not(:last-child):after {
                 background-color: $light-grey;
                 bottom: 0;
@@ -114,6 +128,9 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
     &__content {
         padding: 40px 8px;
         width: 70%;
+        @include for-phone-only {
+            width: 100%;
+        }
     }
     &__post {
         text-align: center;
@@ -201,6 +218,9 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
     &__sidebar {
         padding: 20px 10px;
         width: 20%;
+        @include for-phone-only {
+            width: 90%;
+        }
     }
     .sidebar {
         &__top {
@@ -259,6 +279,9 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto 40px;
     width: 80%;
+    @include for-phone-only {
+        width: 90%;
+    }
     &__title {
         background-color: $light-grey;
         padding: 20px;
@@ -298,6 +321,12 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
         margin: 30px auto;
         text-align: center;
         width: 70%;
+        @include for-phone-only {
+            width: 90%;
+        }
+        @include for-tablet-only {
+            width: 80%;
+        }
     }
     &__split {
         @include flx(justify-content, center);
@@ -306,9 +335,16 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
     }
     &__img-description {
         width: $img-width;
+        @include for-phone-only {
+            width: 80%;
+        }
     }
     &__txt {
         width: calc(100% - #{$img-width});
+        @include for-phone-only {
+            width: 90%;
+            text-align: center;
+        }
     }
     &__p {
         color: $dark-grey;
@@ -321,6 +357,9 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto 40px;
     width: 80%;
+    @include for-phone-only {
+        width: 90%;
+    }
     &__title {
         background-color: $light-grey;
         padding: 20px;
