@@ -2,13 +2,19 @@ $dark-grey: #464646;
 $light-grey: #eaeaeb;
 $purple: #a050be;
 $yellow: #fabe50;
-$img2-width: 45%; // Tamanho da img2
+$img-width: 45%; // Tamanho da imagem da descrição do index
 %no-decoration {
     text-decoration: none;
 }
 
 %decoration {
     text-decoration: underline;
+}
+
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 
@@ -187,15 +193,13 @@ $img2-width: 45%; // Tamanho da img2
             background-color: $yellow;
             font-weight: bold;
             letter-spacing: 1.5px;
-            margin: 0;
+            margin: 0 0 10px;
             padding: 10px 10px;
             text-align: center;
             text-transform: uppercase;
         }
         &__posts {
-            list-style: none;
-            margin: 0;
-            padding: 10px 0 0;
+            @include reset-list;
         }
         &__list {
             align-items: center;
@@ -286,10 +290,10 @@ $img2-width: 45%; // Tamanho da img2
         justify-content: center;
     }
     &__img-description {
-        width: $img2-width;
+        width: $img-width;
     }
     &__txt {
-        width: calc(100% - #{$img2-width});
+        width: calc(100% - #{$img-width});
     }
     &__p {
         color: $dark-grey;
