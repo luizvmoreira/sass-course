@@ -243,6 +243,54 @@
   padding: 10px 20px;
 }
 
+.main .sidebar__img, .main .sidebar__title, .main__description, .main__tag, .main__date, .main__post {
+  margin-top: 0;
+}
+
+.main__a, .main__p, .main__subtitle {
+  margin-top: 10px;
+}
+
+.main .sidebar__post-date {
+  margin-top: 5px;
+}
+
+.main .sidebar__post-date, .main__description, .main__tag, .main__date, .main__post {
+  margin-bottom: 0;
+}
+
+.main .sidebar__img, .main .sidebar__title, .main__a, .main__p {
+  margin-bottom: 10px;
+}
+
+.main__subtitle {
+  margin-bottom: 20px;
+}
+
+.main .sidebar__post-date, .main .sidebar__title, .main__a, .main__p {
+  margin-left: 0;
+}
+
+.main__tag, .main__date {
+  margin-left: 10px;
+}
+
+.main .sidebar__img, .main__description, .main__post {
+  margin-left: auto;
+}
+
+.main .sidebar__post-date, .main .sidebar__title, .main__a, .main__p {
+  margin-right: 0;
+}
+
+.main__tag, .main__date {
+  margin-right: 10px;
+}
+
+.main .sidebar__img, .main__description, .main__post {
+  margin-right: auto;
+}
+
 /* Esse trecho de estilo se refere ao main do index.html*/
 .main {
   display: flex;
@@ -261,7 +309,6 @@
 }
 .main__post {
   text-align: center;
-  margin: 0 auto;
   max-width: 800px;
 }
 .main__title {
@@ -277,18 +324,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 0 20px 0;
 }
 .main__date {
   font-style: italic;
   font-size: 0.75rem;
-  margin: 0 10px;
 }
 .main__tag {
   border: 1px solid #a050be;
   color: #a050be;
   font-size: 0.875rem;
-  margin: 0 10px;
   padding: 5px 7px;
 }
 .main__details {
@@ -299,7 +343,6 @@
 }
 .main__description {
   font-size: 0.875rem;
-  margin: 0 auto;
   max-width: 650px;
   padding: 40px 0 25px;
 }
@@ -330,7 +373,6 @@
 .main__p {
   color: #464646;
   font-size: 0.875rem;
-  margin: 10px 0;
 }
 .main__comments {
   width: 50%;
@@ -339,7 +381,6 @@
   color: #464646;
   font-size: 0.875rem;
   text-decoration: none;
-  margin: 10px 0;
 }
 .main__a:hover {
   color: #a050be;
@@ -361,7 +402,6 @@
   background-color: #fabe50;
   font-weight: bold;
   letter-spacing: 1.5px;
-  margin: 0 0 10px;
   padding: 10px 10px;
   text-align: center;
   text-transform: uppercase;
@@ -383,7 +423,6 @@
 }
 .main .sidebar__img {
   border-radius: 12px;
-  margin: 0 auto 10px;
   width: 70%;
 }
 .main .sidebar__details {
@@ -396,7 +435,6 @@
 }
 .main .sidebar__post-date {
   font-size: 0.75rem;
-  margin: 5px 0 0 0;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -53,6 +53,17 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
 'about',
 'article';
 
+$directions: top, bottom, left, right;
+$layout-margin-size: 10px;
+
+@each $direction in $directions {
+    %no-margin-#{$direction} {margin-#{$direction}: 0;}
+    %default-margin-#{$direction} {margin-#{$direction}: $layout-margin-size;}
+    %double-margin-#{$direction} {margin-#{$direction}: $layout-margin-size * 2;}
+    %half-margin-#{$direction} {margin-#{$direction}: $layout-margin-size / 2;}
+    %auto-margin-#{$direction} {margin-#{$direction}: auto;}
+}
+
 /* Esse trecho de estilo se refere ao main do index.html*/
 
 .main {
@@ -68,7 +79,7 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
     }
     &__post {
         text-align: center;
-        margin: 0 auto;
+        @extend %no-margin-top, %auto-margin-right, %no-margin-bottom, %auto-margin-left;
         max-width: 800px;
     }
     &__title {
@@ -83,18 +94,19 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
     &__subtitle {
         @include flx(justify-content, center);
         align-items: center;
-        margin: 10px 0 20px 0;
+        @extend %default-margin-top, %double-margin-bottom;
     }
     &__date {
         font-style: italic;
         @include fontSize(12px);
-        margin: 0 10px;
+        @extend %no-margin-top, %default-margin-right, %no-margin-bottom, %default-margin-left;
+        @extend %no-margin-top, %default-margin-right, %no-margin-bottom, %default-margin-left;
     }
     &__tag {
         border: 1px solid $purple;
         color: $purple;
         @include fontSize(14px);
-        margin: 0 10px;
+        @extend %no-margin-top, %default-margin-right, %no-margin-bottom, %default-margin-left;
         padding: 5px 7px;
     }
     &__details {
@@ -105,7 +117,7 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
     }
     &__description {
         @include fontSize(14px);
-        margin: 0 auto;
+        @extend %no-margin-top, %auto-margin-right, %no-margin-bottom, %auto-margin-left;
         max-width: 650px;
         padding: 40px 0 25px;
     }
@@ -135,7 +147,7 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
     &__p {
         color: $dark-grey;
         @include fontSize(14px);
-        margin: 10px 0;
+        @extend %default-margin-top, %no-margin-right, %default-margin-bottom, %no-margin-left;
     }
     &__comments {
         width: 50%;
@@ -144,7 +156,7 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
         color: $dark-grey;
         @include fontSize(14px);
         text-decoration: none;
-        margin: 10px 0;
+        @extend %default-margin-top, %no-margin-right, %default-margin-bottom, %no-margin-left;
         &:hover {
             color: $purple;
         }
@@ -165,7 +177,7 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
             background-color: $yellow;
             font-weight: bold;
             letter-spacing: 1.5px;
-            margin: 0 0 10px;
+            @extend %no-margin-top, %no-margin-right, %default-margin-bottom, %no-margin-left;
             padding: 10px 10px;
             text-align: center;
             text-transform: uppercase;
@@ -184,7 +196,7 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
         }
         &__img {
             border-radius: 12px;
-            margin: 0 auto 10px;
+            @extend %no-margin-top, %auto-margin-right, %default-margin-bottom, %auto-margin-left;
             width: 70%;
         }
         &__details {
@@ -201,7 +213,7 @@ $img-width: 45%; // Tamanho da imagem da descrição do index
         }
         &__post-date {
             @include fontSize(12px);
-            margin: 5px 0 0 0;
+            @extend %half-margin-top, %no-margin-right, %no-margin-bottom, %no-margin-left;
         }
     }
 }
