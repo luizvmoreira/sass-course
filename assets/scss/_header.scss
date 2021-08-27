@@ -48,8 +48,10 @@
         &__link {
             color: $dark-grey;
             padding: 0 25px;
+            text-decoration: none;
             &:hover {
                 color: $purple;
+                text-decoration: underline;
             }
         }
     }

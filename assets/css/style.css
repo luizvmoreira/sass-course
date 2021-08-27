@@ -65,9 +65,11 @@
 .header .menu__link {
   color: #464646;
   padding: 0 25px;
+  text-decoration: none;
 }
 .header .menu__link:hover {
   color: #a050be;
+  text-decoration: underline;
 }
 
 /* Esse trecho de estilo se refere ao rodapé do blog. */
