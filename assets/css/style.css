@@ -546,8 +546,8 @@
 }
 .main__a {
   color: #464646;
-  font-size: 0.875rem;
   text-decoration: none;
+  font-size: 0.875rem;
 }
 .main__a:hover {
   color: #a050be;
@@ -579,14 +579,18 @@
   list-style: none;
 }
 .main .sidebar__list {
-  display: flex;
-  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   padding: 10px;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
 }
 .main .sidebar__list:not(:last-child) {
   border-bottom: 1px dashed #eaeaeb;
+}
+.main .sidebar__list:hover {
+  transform: scale(1.05);
 }
 .main .sidebar__img {
   border-radius: 12px;

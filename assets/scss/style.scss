@@ -156,8 +156,8 @@ $layout-margin-size: 10px;
     }
     &__a {
         color: $dark-grey;
-        @include fontSize(14px);
         text-decoration: none;
+        @include fontSize(14px);
         @extend %default-margin-top, %no-margin-right, %default-margin-bottom, %no-margin-left;
         &:hover {
             color: $purple;
@@ -179,27 +179,31 @@ $layout-margin-size: 10px;
             background-color: $yellow;
             font-weight: bold;
             letter-spacing: 1.5px;
-            @extend %no-margin-top, %no-margin-right, %default-margin-bottom, %no-margin-left;
             padding: 10px 10px;
             text-align: center;
             text-transform: uppercase;
+            @extend %no-margin-top, %no-margin-right, %default-margin-bottom, %no-margin-left;
         }
         &__posts {
             @include reset-list;
         }
         &__list {
-            @include flx(justify-content, center);
             align-items: center;
             flex-wrap: wrap;
             padding: 10px;
+            transition: .2s;
+            @include flx(justify-content, center);
             &:not(:last-child) {
                 border-bottom: 1px dashed $light-grey;
+            }
+            &:hover {
+                transform: scale(1.05);
             }
         }
         &__img {
             border-radius: 12px;
-            @extend %no-margin-top, %auto-margin-right, %default-margin-bottom, %auto-margin-left;
             width: 70%;
+            @extend %no-margin-top, %auto-margin-right, %default-margin-bottom, %auto-margin-left;
         }
         &__details {
             padding-left: 10px;
