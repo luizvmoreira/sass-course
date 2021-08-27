@@ -1,3 +1,17 @@
+$half-whidth: 50%;
+$full-width: 100%;
+
+@mixin theme-collection($half-post: true) {
+    @include for-phone-only {
+        width: $full-width;
+    }
+    @if $half-post {
+        width: $half-whidth;
+    } @else {
+        width: $full-width;
+    }
+}
+
 .collection {
     align-items: center;
     flex-wrap: wrap;
@@ -36,6 +50,10 @@
         align-items: center;
         flex-wrap: wrap;
         @include flx(justify-content, center);
+        @include theme-collection($half-post: false);
+        &.half {
+            @include theme-collection($half-post: true);
+        }
     }
     &__figure {
         width: 50%;
